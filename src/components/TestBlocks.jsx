@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import "./styles/TestBlocks.css";
 
 const TestBlocks = () => {
@@ -252,44 +253,35 @@ const TestBlocks = () => {
                 </div>
               )}
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Social Proof Variation */}
-      <section className="social-proof-section" id="social-proof">
-        <div className="container">
-          <h2 className="section-title">Lo que dicen nuestros pacientes</h2>
-          <div className="testimonials-compact">
-            <div className="testimonial-compact">
-              <div className="testimonial-rating">⭐⭐⭐⭐⭐</div>
-              <p>"Desde el principio me he sentido escuchada, comprendida y acompañada. Una profesional excelente."</p>
-              <div className="testimonial-author">- L.A.</div>
+            <div className="faq-item">
+              <button
+                className={`faq-question ${activeQuestion === 5 ? 'active' : ''}`}
+                onClick={() => toggleQuestion(5)}
+              >
+                <span>¿Qué método terapéutico utilizas?</span>
+                <span className="faq-icon">{activeQuestion === 5 ? '−' : '+'}</span>
+              </button>
+              {activeQuestion === 5 && (
+                <div className="faq-answer">
+                  <p>Trabajo desde un enfoque integrador, combinando técnicas de diferentes corrientes psicológicas según las necesidades de cada persona. Principalmente utilizo terapia cognitivo-conductual, terapia humanista y mindfulness, adaptando el tratamiento a tus objetivos específicos.</p>
+                </div>
+              )}
             </div>
-            <div className="testimonial-compact">
-              <div className="testimonial-rating">⭐⭐⭐⭐⭐</div>
-              <p>"Llevo unos meses con Carolina y solo puedo decir que es excelente. Me siento muy bien hablando con ella y noto el avance."</p>
-              <div className="testimonial-author">- M.T.</div>
-            </div>
-            <div className="testimonial-compact">
-              <div className="testimonial-rating">⭐⭐⭐⭐⭐</div>
-              <p>"Gracias a Carolina estoy descubriendo otra manera de vivir la vida. Me siento más conectada conmigo misma."</p>
-              <div className="testimonial-author">- Cristina</div>
-            </div>
-            <div className="testimonial-compact">
-              <div className="testimonial-rating">⭐⭐⭐⭐⭐</div>
-              <p>"Muy buena profesional, destaco su facilidad para hacerte sentir cómodo en su consulta."</p>
-              <div className="testimonial-author">- MG</div>
-            </div>
-            <div className="testimonial-compact">
-              <div className="testimonial-rating">⭐⭐⭐⭐⭐</div>
-              <p>"Carolina es encantadora, una gran profesional. Me escucha y me comprende."</p>
-              <div className="testimonial-author">- Alicia</div>
-            </div>
-            <div className="testimonial-compact">
-              <div className="testimonial-rating">⭐⭐⭐⭐⭐</div>
-              <p>"Escucha activa, cercanía y confianza para poder abrirte a tus emociones. 100% recomendada."</p>
-              <div className="testimonial-author">- PNT</div>
+
+            <div className="faq-item">
+              <button
+                className={`faq-question ${activeQuestion === 6 ? 'active' : ''}`}
+                onClick={() => toggleQuestion(6)}
+              >
+                <span>¿Cuál es el precio de las sesiones?</span>
+                <span className="faq-icon">{activeQuestion === 6 ? '−' : '+'}</span>
+              </button>
+              {activeQuestion === 6 && (
+                <div className="faq-answer">
+                  <p>El precio varía según el tipo de terapia (individual, pareja, familiar) y la modalidad (presencial u online). Ponte en contacto conmigo para informarte sobre las tarifas actuales y posibles opciones de pago. La primera consulta informativa es gratuita.</p>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -331,7 +323,7 @@ const TestBlocks = () => {
             <h2>¿Listo para empezar tu cambio?</h2>
             <p>Si sientes que es el momento de dar el paso, estoy aquí para acompañarte. Sin presiones, a tu ritmo.</p>
             <div className="cta-final-buttons">
-              <button className="btn btn-primary btn-lg">Contactar</button>
+              <Link to="/contacto" className="btn btn-primary btn-lg">Contactar</Link>
             </div>
             <div className="cta-benefits">
               <div className="cta-benefit">

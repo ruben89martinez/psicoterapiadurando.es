@@ -50,7 +50,7 @@ const Features = () => {
         </div>
         <div className="corazon-overlap">
           <img
-            src="/images/corazon.jpg"
+            src="/images/peace/mind_1.jpg"
             alt="Fondo con diseño de corazón"
             className="img-fluid"
           />

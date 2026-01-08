@@ -17,8 +17,8 @@ const Header = () => {
     <header className="header-container">
       {/* Logo */}
       <div className="header-logo">
-        <img src="/images/logo-zen-blanco-sin-fondo.png" alt="Logo Zen" className="logo-image" />
-        <img src="/images/logo_letra_negro-sin-fondo.png" alt="Psicoterapia Durango" className="logo-letras" />
+        <img src="/images/logos/logo-zen-blanco-sin-fondo.png" alt="Logo Zen" className="logo-image" />
+        <img src="/images/logos/logo_letra_negro-sin-fondo.png" alt="Psicoterapia Durango" className="logo-letras" />
       </div>
 
       {/* Botón del menú móvil */}

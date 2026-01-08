@@ -13,7 +13,7 @@ const Footer = () => (
           <FaInstagram size={42} />
         </a>
         <a href="https://www.doctoralia.es/carolina-durango-piedrahita/psicologo/murcia" target="_blank" rel="noopener noreferrer">
-          <img src="/images/doctoralia.png" alt="Doctoralia" className="icon-image" />
+          <img src="/images/logos/doctoralia.png" alt="Doctoralia" className="icon-image" />
         </a>
         <a href="https://wa.me/34600647145" target="_blank" rel="noopener noreferrer" className="whatsapp-icon">
           <FaWhatsapp size={42} />

@@ -4,7 +4,10 @@
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   align-items: start;
-  padding: 3rem 2rem;
+  padding-top: 6rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 3rem;
   min-height: 80vh;
   background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
   max-width: 1400px;

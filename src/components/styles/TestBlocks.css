@@ -5,10 +5,19 @@
 
 /* Hero CTA Section */
 .hero-cta-section {
-  padding: 6rem 2rem;
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  padding-top: 9rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 6rem;
+  background-image:
+    linear-gradient(135deg, rgba(12, 41, 62, 0.7) 0%, rgba(28, 78, 104, 0.65) 100%),
+    url('/images/peace/zen-sand.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
   color: white;
   text-align: center;
+  position: relative;
 }
 
 .hero-cta-content {
@@ -21,13 +30,19 @@
   font-family: 'Playfair Display', serif;
   margin-bottom: 1.5rem;
   color: white;
+  text-shadow:
+    2px 2px 6px rgba(0, 0, 0, 0.35),
+    0 0 24px rgba(0, 0, 0, 0.25);
 }
 
 .hero-subtitle {
   font-size: 1.25rem;
   margin-bottom: 2.5rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.98);
   line-height: 1.8;
+  text-shadow:
+    1px 1px 4px rgba(0, 0, 0, 0.45),
+    0 0 18px rgba(0, 0, 0, 0.3);
 }
 
 .hero-cta-buttons {
@@ -706,7 +721,11 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero-cta-section {
-    padding: 4rem 1.5rem;
+    padding-top: 7rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 4rem;
+    background-attachment: scroll;
   }
 
   .hero-cta-buttons {

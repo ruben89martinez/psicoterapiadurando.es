@@ -163,6 +163,38 @@
   margin-bottom: 0;
 }
 
+/* Services Footer */
+.services-footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+}
+
+/* Saber Más Button Centered */
+.saber-mas-button-center {
+  display: inline-block;
+  padding: 1rem 3rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  color: white;
+  text-decoration: none;
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+.saber-mas-button-center:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  background: linear-gradient(135deg, var(--primary-light), var(--accent-light));
+}
+
+.saber-mas-button-center:active {
+  transform: translateY(0);
+}
+
 /* Active State Indicator */
 .services-column.active {
   border-color: var(--accent-color);
@@ -205,6 +237,16 @@
   .accordion-content {
     padding: 1.5rem 1.25rem;
   }
+
+  .services-footer {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+  }
+
+  .saber-mas-button-center {
+    padding: 0.875rem 2.5rem;
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -236,5 +278,16 @@
 
   .accordion-content p {
     font-size: 0.95rem;
+  }
+
+  .services-footer {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+  }
+
+  .saber-mas-button-center {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 1rem;
   }
 }

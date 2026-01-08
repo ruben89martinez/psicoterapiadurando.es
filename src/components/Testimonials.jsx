@@ -37,21 +37,6 @@ const Testimonials = () => {
             <p>"Escucha activa, cercanía y confianza para poder abrirte a tus emociones. 100% recomendada."</p>
             <div className="testimonial-author">- PNT</div>
           </div>
-          <div className="testimonial-compact">
-            <div className="testimonial-rating">⭐⭐⭐⭐⭐</div>
-            <p>"Excelente profesional, con una inmensa empatía y gran capacidad de comunicación. La recomiendo sin duda."</p>
-            <div className="testimonial-author">- Violeta</div>
-          </div>
-          <div className="testimonial-compact">
-            <div className="testimonial-rating">⭐⭐⭐⭐⭐</div>
-            <p>"Excelente psicóloga, muy profesional. Me ha ayudado en todos los ámbitos de mi vida."</p>
-            <div className="testimonial-author">- Miriam</div>
-          </div>
-          <div className="testimonial-compact">
-            <div className="testimonial-rating">⭐⭐⭐⭐⭐</div>
-            <p>"Muy cómoda con Carolina. Muy atenta desde que concerté la cita. Creo que me va a ayudar mucho."</p>
-            <div className="testimonial-author">- Ana Belén</div>
-          </div>
         </div>
       </div>
     </section>
