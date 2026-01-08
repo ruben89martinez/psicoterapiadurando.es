@@ -64,6 +64,7 @@
   height: 250px;
   object-fit: cover;
   transition: transform var(--transition-slow);
+  filter: brightness(1.05) saturate(1.15);
 }
 
 .services-column:hover .service-image {

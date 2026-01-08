@@ -11,8 +11,17 @@
   min-height: 80vh;
   background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
   max-width: 1400px;
+  width: 100%;
   margin: 0 auto;
   scroll-margin-top: 90px;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.contact-container *,
+.contact-container *::before,
+.contact-container *::after {
+  box-sizing: border-box;
 }
 
 /* Contact Columns */
@@ -23,6 +32,9 @@
   box-shadow: var(--shadow-lg);
   border: 1px solid rgba(45, 95, 127, 0.1);
   transition: all var(--transition-base);
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
 }
 
 .contact-column:hover {
@@ -36,6 +48,7 @@
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .form-title {
@@ -76,6 +89,8 @@
   transition: all var(--transition-base);
   background: var(--bg-primary);
   color: var(--text-primary);
+  box-sizing: border-box;
+  max-width: 100%;
 }
 
 .contact-form select {
@@ -148,6 +163,8 @@
   align-items: center;
   width: 100%;
   margin-bottom: 0;
+  box-sizing: border-box;
+  max-width: 100%;
 }
 
 .calendar-title {
@@ -166,6 +183,13 @@
   max-width: 100%;
   border-radius: var(--radius-md);
   overflow: hidden;
+  box-sizing: border-box;
+  display: block;
+}
+
+.contact-calendar .zl-url > * {
+  max-width: 100% !important;
+  box-sizing: border-box;
 }
 
 /* Feedback Message */
@@ -213,15 +237,27 @@
 }
 
 @media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
   .contact-container {
     grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 2rem 1.5rem;
+    gap: 1.5rem;
+    padding: 1rem;
+    padding-top: 80px;
     min-height: auto;
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .contact-column {
-    padding: 1.75rem;
+    padding: 1.5rem 1rem;
+    margin: 0;
+    width: calc(100vw - 2rem);
+    max-width: 100%;
   }
 
   .contact-form {
@@ -253,16 +289,37 @@
     padding: 0.875rem 1.75rem;
     font-size: 1rem;
   }
+
+  .contact-whatsapp {
+    padding: 1.5rem !important;
+  }
+
+  .whatsapp-button {
+    padding: 1.5rem 1.5rem;
+  }
+
+  .contact-map iframe,
+  .contact-calendar .zl-url,
+  .contact-calendar iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
 }
 
 @media (max-width: 480px) {
   .contact-container {
-    padding: 1.5rem 1rem;
-    gap: 1.5rem;
+    padding: 1rem 0.5rem;
+    padding-top: 80px;
+    gap: 1rem;
+    width: 100vw;
+    max-width: 100vw;
   }
 
   .contact-column {
-    padding: 1.5rem;
+    padding: 1rem 0.75rem;
+    margin: 0;
+    width: calc(100vw - 1rem);
+    max-width: 100%;
   }
 
   .form-title,
@@ -291,6 +348,29 @@
     font-size: 0.875rem;
     padding: 0.875rem 1.25rem;
   }
+
+  .contact-whatsapp {
+    padding: 1rem !important;
+  }
+
+  .whatsapp-button {
+    padding: 1.25rem 1rem;
+  }
+
+  .contact-map iframe,
+  .contact-calendar .zl-url,
+  .contact-calendar iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .form-title,
+  .calendar-title,
+  .map-title,
+  .whatsapp-title {
+    font-size: 1.4rem !important;
+    word-wrap: break-word;
+  }
 }
 
 /* WhatsApp Section */
@@ -316,6 +396,8 @@
   box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
   width: 100%;
   cursor: pointer;
+  box-sizing: border-box;
+  max-width: 100%;
 }
 
 .whatsapp-button:hover {
@@ -357,6 +439,8 @@
   border-radius: var(--radius-md);
   width: 100%;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  max-width: 100%;
 }
 
 .map-address {
@@ -365,4 +449,13 @@
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--primary-color);
+}
+
+/* Ensure Doctoralia widget doesn't overflow */
+#zl-widget,
+#zl-widget iframe,
+.zl-widget,
+.zl-widget iframe {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
 }

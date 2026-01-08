@@ -44,6 +44,22 @@ const Contact = () => {
 
   return (
     <div className="contact-container" id="contact">
+      <div className="contact-column contact-calendar">
+        <h2 className="calendar-title">Reserva tu cita con nosotros</h2>
+        <a
+          id="zl-url"
+          className="zl-url"
+          href="https://www.doctoralia.es/carolina-durango-piedrahita/psicologo/murcia"
+          rel="nofollow"
+          data-zlw-doctor="carolina-durango-piedrahita"
+          data-zlw-type="big_with_calendar"
+          data-zlw-opinion="false"
+          data-zlw-hide-branding="true"
+          data-zlw-saas-only="true"
+        >
+          Carolina Durango Piedrahita - Doctoralia.es
+        </a>
+      </div>
       <div className="contact-column contact-form">
         <h2 className="form-title">Envíanos un correo</h2>
         <form onSubmit={onSubmit}>
@@ -52,6 +68,7 @@ const Contact = () => {
             <input
               type="text"
               name="name"
+              autoComplete="name"
               required
             />
           </label>
@@ -60,6 +77,7 @@ const Contact = () => {
             <input
               type="email"
               name="email"
+              autoComplete="email"
               required
             />
           </label>
@@ -86,22 +104,6 @@ const Contact = () => {
           <button type="submit">Enviar</button>
         </form>
         {result && <p className="feedback-message">{result}</p>}
-      </div>
-      <div className="contact-column contact-calendar">
-        <h2 className="calendar-title">Reserva tu cita con nosotros</h2>
-        <a
-          id="zl-url"
-          className="zl-url"
-          href="https://www.doctoralia.es/carolina-durango-piedrahita/psicologo/murcia"
-          rel="nofollow"
-          data-zlw-doctor="carolina-durango-piedrahita"
-          data-zlw-type="big_with_calendar"
-          data-zlw-opinion="false"
-          data-zlw-hide-branding="true"
-          data-zlw-saas-only="true"
-        >
-          Carolina Durango Piedrahita - Doctoralia.es
-        </a>
       </div>
 
       {/* WhatsApp Section */}

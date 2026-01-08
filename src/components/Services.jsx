@@ -37,7 +37,7 @@ const Services = () => {
     },
     {
       title: "Terapia Adolescente",
-      image: "/images/personas/terapia_adolescente.png",
+      image: "/images/personas/terapia_adolescente.jpg",
       content: [
         "La adolescencia es una etapa de cambios profundos y desafíos únicos. La terapia para adolescentes proporciona un espacio seguro donde pueden expresar sus emociones, enfrentar presiones sociales y desarrollar habilidades para gestionar el estrés y la ansiedad.",
         "Trabajamos en fortalecer su autoestima, mejorar las relaciones familiares y ayudarles a construir una identidad saludable. Nuestro enfoque respeta su autonomía mientras les brindamos el apoyo necesario para navegar esta importante etapa de sus vidas.",

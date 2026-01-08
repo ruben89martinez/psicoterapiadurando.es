@@ -9,7 +9,7 @@
   padding: 0;
   position: relative;
   overflow: hidden;
-  margin-top: 80px;
+  margin-top: 4rem;
 }
 
 .about-hero::before {
@@ -21,7 +21,7 @@
   height: 100%;
   background-image: url("/images/carol/foto_perfil.jpeg");
   background-size: cover;
-  background-position: center center;
+  background-position: center top;
   background-repeat: no-repeat;
   z-index: 0;
 }
@@ -184,12 +184,14 @@
     min-height: auto;
     grid-template-columns: 1fr;
     grid-template-rows: 40vh auto;
+    margin-top: 4rem;
   }
 
   .about-hero::before {
     width: 100%;
     height: 40vh;
     position: relative;
+    background-position: center top;
   }
 
   .about-hero::after {
@@ -238,6 +240,7 @@
 
   .about-hero::before {
     height: 35vh;
+    background-position: center top ;
   }
 
   .about-hero::after {

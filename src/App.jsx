@@ -10,6 +10,7 @@ import Features from "./components/Features";
 import Discover from "./components/Discover";
 import Testimonials from "./components/Testimonials";
 import TestBlocks from "./components/TestBlocks";
+import Timeline from "./components/Timeline";
 import ScrollToTop from "./ScrollToTop";
 
 const App = () => (
@@ -22,6 +23,7 @@ const App = () => (
           <>
             <Hero />
             <Features />
+            <Timeline />
             <Services />
             <Testimonials />
           </>

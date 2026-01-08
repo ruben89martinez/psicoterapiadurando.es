@@ -5,9 +5,9 @@
 
 /* Hero CTA Section */
 .hero-cta-section {
-  padding-top: 9rem;
   padding-left: 2rem;
   padding-right: 2rem;
+  padding-top: 4rem;
   padding-bottom: 6rem;
   background-image:
     linear-gradient(135deg, rgba(12, 41, 62, 0.7) 0%, rgba(28, 78, 104, 0.65) 100%),
@@ -18,6 +18,7 @@
   color: white;
   text-align: center;
   position: relative;
+  margin-top: 4rem;
 }
 
 .hero-cta-content {
@@ -721,11 +722,12 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero-cta-section {
-    padding-top: 7rem;
+    padding-top: 3rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     padding-bottom: 4rem;
     background-attachment: scroll;
+    margin-top: 4rem;
   }
 
   .hero-cta-buttons {

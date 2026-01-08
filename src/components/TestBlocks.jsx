@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import "./styles/TestBlocks.css";
+import "./styles/Features.css";
 
 const TestBlocks = () => {
   const [activeQuestion, setActiveQuestion] = useState(null);
@@ -130,47 +131,38 @@ const TestBlocks = () => {
         </div>
       </section>
 
-      {/* Process Timeline - Proceso Terapéutico */}
-      <section className="timeline-section" id="timeline">
-        <div className="container">
-          <h2 className="section-title">Tu Camino Hacia el Bienestar</h2>
-          <p className="section-subtitle">Un proceso estructurado para tu crecimiento personal</p>
-
-          <div className="timeline">
-            <div className="timeline-item">
-              <div className="timeline-marker">1</div>
-              <div className="timeline-content">
-                <h3>Primera Consulta</h3>
-                <p>Conocemos tus necesidades y objetivos. Evaluación inicial sin compromiso.</p>
-              </div>
-            </div>
-
-            <div className="timeline-item">
-              <div className="timeline-marker">2</div>
-              <div className="timeline-content">
-                <h3>Plan Personalizado</h3>
-                <p>Diseñamos un plan de tratamiento adaptado a ti y tus circunstancias.</p>
-              </div>
-            </div>
-
-            <div className="timeline-item">
-              <div className="timeline-marker">3</div>
-              <div className="timeline-content">
-                <h3>Sesiones Regulares</h3>
-                <p>Trabajamos juntos en sesiones programadas para alcanzar tus metas.</p>
-              </div>
-            </div>
-
-            <div className="timeline-item">
-              <div className="timeline-marker">4</div>
-              <div className="timeline-content">
-                <h3>Seguimiento</h3>
-                <p>Evaluamos el progreso y ajustamos el tratamiento según sea necesario.</p>
-              </div>
+      {/* El Poder de la Terapia */}
+      <div className="therapy-overlap-container mt-5">
+        <div className="therapy-content-card">
+          <div className="text-column">
+            <h2 className="mb-4">El Poder de la Terapia</h2>
+            <div className="segundobloque">
+              <p>
+                La psicoterapia puede ayudarte a comprender tus emociones, pensamientos y comportamientos, y te brindará herramientas efectivas para lidiar con ellos de manera saludable. También te ofrecerá un espacio seguro y confidencial donde puedas expresarte libremente y recibir apoyo y comprensión.
+              </p>
+              <p>
+                Por naturaleza los seres humanos tendemos a restarle importancia a aquello que nos angustia por evitar contactar con el dolor. Frases como <em>"yo puedo solo"</em>, <em>"seré más fuerte si atravieso este problema sin ayuda"</em> o <em>"no estoy tan mal"</em> suelen formar parte de nuestro discurso mental cuando nos planteamos si deberíamos ir a terapia o no.
+              </p>
+              <p>
+                Pues bien, buscar ayuda es un acto de <em>valentía, coraje y responsabilidad</em> sobre nosotros mismos y sobre nuestro bienestar emocional. Desarrollar herramientas que aún no conoces te servirán para vivir mejor y desarrollarte con más plenitud.
+              </p>
+              <p>
+                Además, es importante recordar que no siempre es fácil identificar cuándo necesitamos ayuda. Muchas veces, nuestros problemas emocionales o psicológicos pueden ser sutiles y no evidentes a simple vista. Por eso, si sientes que algo no está bien en tu vida, si te sientes abrumado, ansioso, deprimido o si tienes dificultades para relacionarte con los demás, puede ser una buena idea considerar la posibilidad de buscar ayuda profesional.
+              </p>
+              <p>
+                En resumen, buscar ayuda a través de la terapia es una decisión valiente y responsable que puede mejorar significativamente tu bienestar emocional y tu calidad de vida. No tengas miedo de pedir ayuda cuando la necesites; puede marcar una gran diferencia en tu vida.
+              </p>
             </div>
           </div>
         </div>
-      </section>
+        <div className="corazon-overlap">
+          <img
+            src="/images/peace/mind_1.jpg"
+            alt="Fondo con diseño de corazón"
+            className="img-fluid"
+          />
+        </div>
+      </div>
 
       {/* FAQ Section - Preguntas Frecuentes */}
       <section className="faq-section" id="faq">
