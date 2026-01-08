@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import "./styles/Services.css"; // Importamos los estilos desde el archivo CSS
 
 const Services = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
+  const [activeIndexes, setActiveIndexes] = useState([]);
 
   const toggleAccordion = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
+    setActiveIndexes((prev) =>
+      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
+    );
   };
 
   const services = [
@@ -27,11 +29,11 @@ const Services = () => {
       ],
     },
     {
-      title: "Terapia Familiar",
-      image: "/images/terapia_familiar.jpg",
+      title: "Terapia Online",
+      image: "/images/terapia_online.jpg",
       content: [
-        "La terapia familiar se centra en mejorar la dinámica y las relaciones dentro del núcleo familiar. Ofrecemos un espacio donde cada miembro puede expresar sus inquietudes y participar en la construcción de un entorno más armonioso.",
-        "Especialmente útil en procesos como el duelo migratorio o la adaptación a cambios significativos, esta terapia fomenta la comprensión mutua y el apoyo entre todos los integrantes de la familia.",
+        "La terapia online ofrece la misma calidad y profesionalidad que las sesiones presenciales, con la comodidad de conectarte desde cualquier lugar. A través de videollamadas seguras y confidenciales, podrás acceder a apoyo psicológico sin barreras geográficas.",
+        "Esta modalidad es ideal para quienes tienen agendas ocupadas, viven lejos o simplemente prefieren la comodidad de su hogar. Trabajaremos juntos en tus objetivos terapéuticos con la misma dedicación y eficacia que en consulta presencial.",
       ],
     },
   ];
@@ -44,7 +46,7 @@ const Services = () => {
           <div
             key={index}
             className={`services-column ${
-              activeIndex === index ? "active" : ""
+              activeIndexes.includes(index) ? "active" : ""
             }`}
           >
             <img
@@ -54,13 +56,13 @@ const Services = () => {
             />
             <button
               className={`accordion-button ${
-                activeIndex === index ? "active" : ""
+                activeIndexes.includes(index) ? "active" : ""
               }`}
               onClick={() => toggleAccordion(index)}
             >
               {service.title}
             </button>
-            {activeIndex === index && (
+            {activeIndexes.includes(index) && (
               <div className="accordion-content">
                 {service.content.map((paragraph, i) => (
                   <p key={i}>{paragraph}</p>

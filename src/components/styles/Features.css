@@ -1,106 +1,269 @@
+/* Features Section */
+.features-section {
+    padding: 3rem 2rem;
+    background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+}
+
+.features-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* First Section - Image Left, Text Right */
 .features-section .row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-bottom: 3rem;
 }
 
 .features-section .col-md-6.image-column {
-  flex: 0 0 40%;
-  max-width: 40%;
+    flex: 0 0 45%;
+    max-width: 45%;
+    position: relative;
+}
+
+.features-section .col-md-6.image-column::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: var(--radius-xl);
+    opacity: 0.1;
+    z-index: 0;
 }
 
 .features-section .col-md-6.text-column {
-  flex: 0 0 60%;
-  max-width: 60%;
-  text-align: left;
-  padding-left: 20px;
+    flex: 0 0 50%;
+    max-width: 50%;
+    text-align: left;
 }
 
 .features-section img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  margin: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    transition: transform var(--transition-base);
+    position: relative;
+    z-index: 1;
 }
 
-.full-width-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 60px 20px;
-  gap: 20px;
-}
-
-.full-width-section .text-column {
-  flex: 0 0 60%;
-  max-width: 60%;
-  text-align: left;
-}
-
-.full-width-section .image-column {
-  flex: 0 0 40%;
-  max-width: 40%;
-}
-
-
-.full-width-section img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-@media (max-width: 768px) {
-
-  .features-section .row,
-  .full-width-section {
-    flex-direction: column;
-  }
-
-  .features-section .col-md-6,
-  .full-width-section .text-column,
-  .full-width-section .image-column {
-    flex: unset;
-    max-width: 100%;
-  }
-
-  .full-width-section img {
-    margin-top: 20px;
-  }
-}
-
-.corazon {
-  max-width: 400px;
-  width:80% !important;
-  /* Limita el ancho máximo */
-  height: auto;
-  /* Mantiene la proporción */
-  object-fit: cover;
-  /* Ajusta la imagen dentro del contenedor */
+.features-section img:hover {
+    transform: scale(1.02);
 }
 
 .features-section h2 {
-  font-size: 2rem;
-  /* Aumenta el tamaño del título */
-  font-family: 'Poppins', sans-serif;
-  /* Fuente redondeada */
-  color: #4a5568;
-  margin-bottom: 20px;
-  font-weight: 600;
-  text-align: center;
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-family: 'Playfair Display', serif;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.features-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    border-radius: 2px;
 }
 
 .primerbloque {
-  font-size: 1.1rem;
-  /* Aumenta el tamaño del texto */
-  font-family: 'Poppins', sans-serif;
-  /* Fuente redondeada */
-  line-height: 1.9;
-  /* Mejora el espaciado entre líneas */
-  color: #6b7280;
-  margin-bottom: 20px;
+    font-size: 1.125rem;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.9;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    padding: 1.5rem;
+    background: rgba(45, 95, 127, 0.03);
+    border-left: 4px solid var(--accent-color);
+    border-radius: var(--radius-md);
+}
+
+/* Second Section - Text Overlapping Image Design */
+.therapy-overlap-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 2rem 0;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+.therapy-content-card {
+    background: var(--bg-card);
+    padding: 4rem;
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-xl);
+    border: 1px solid rgba(45, 95, 127, 0.05);
+    flex: 0 0 65%;
+    max-width: 65%;
+    position: relative;
+    z-index: 2;
+    /* Text on top */
+    margin-right: -15%;
+    /* Overlap the image */
+}
+
+.corazon-overlap {
+    flex: 0 0 45%;
+    max-width: 500px;
+    position: relative;
+    z-index: 1;
+    /* Image behind */
+}
+
+.corazon-overlap img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-2xl);
+    border: 8px solid white;
+    transition: all var(--transition-base);
+}
+
+.corazon-overlap img:hover {
+    transform: scale(1.03) rotate(1deg);
 }
 
 .segundobloque {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: var(--text-secondary);
+    text-align: justify;
+}
+
+.segundobloque p {
+    margin-bottom: 1.5rem;
+}
+
+.segundobloque em {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .features-section .row {
+        gap: 2rem;
+    }
+
+    .features-section .col-md-6.image-column,
+    .features-section .col-md-6.text-column {
+        flex: 0 0 48%;
+        max-width: 48%;
+    }
+
+    .therapy-content-card {
+        padding: 3rem;
+        margin-right: -10%;
+    }
+}
+
+@media (max-width: 768px) {
+    .features-section {
+        padding: 3rem 1.5rem;
+    }
+
+    .features-section .row {
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .therapy-overlap-container {
+        flex-direction: column;
+        padding: 2rem 0;
+        margin: 2rem auto;
+    }
+
+    .therapy-content-card {
+        flex: unset;
+        max-width: 100%;
+        margin-right: 0;
+        padding: 2.5rem;
+        margin-bottom: -40px;
+        /* Vertical overlap on mobile */
+        z-index: 2;
+    }
+
+    .corazon-overlap {
+        flex: unset;
+        max-width: 350px;
+        margin: 0 auto;
+        z-index: 1;
+    }
+
+    .corazon-overlap img {
+        border-width: 4px;
+    }
+
+    .features-section .col-md-6.image-column,
+    .features-section .col-md-6.text-column {
+        flex: unset;
+        max-width: 100%;
+    }
+
+    .features-section h2 {
+        text-align: center;
+    }
+
+    .features-section h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .primerbloque {
+        font-size: 1rem;
+        padding: 1.25rem;
+    }
+
+    .segundobloque {
+        font-size: 1rem;
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .features-section {
+        padding: 2rem 1rem;
+    }
+
+    .features-section h2 {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .primerbloque {
+        font-size: 0.95rem;
+        padding: 1rem;
+    }
+
+    .segundobloque {
+        font-size: 0.95rem;
+    }
+
+    .therapy-content-card {
+        padding: 1.5rem;
+        margin-bottom: -30px;
+    }
+
+    .corazon-overlap {
+        max-width: 280px;
+    }
 }

@@ -17,7 +17,8 @@ const Header = () => {
     <header className="header-container">
       {/* Logo */}
       <div className="header-logo">
-        <img src="/images/logo-zen-blanco.jpg" alt="Logo Zen" className="logo-image" />
+        <img src="/images/logo-zen-blanco-sin-fondo.png" alt="Logo Zen" className="logo-image" />
+        <img src="/images/logo_letra_negro-sin-fondo.png" alt="Psicoterapia Durango" className="logo-letras" />
       </div>
 
       {/* Botón del menú móvil */}
@@ -29,33 +30,34 @@ const Header = () => {
       <nav className="header-menu" >
         <ul>
           <li className="menu-item"><HashLink smooth to="/#inicio">Inicio</HashLink></li>
-          <li className="menu-item"><HashLink smooth to="/sobre-mi">Sobre mí</HashLink></li>
           <li className="menu-item"><HashLink smooth to="/#servicios">Servicios</HashLink></li>
-          <li className="menu-item"><HashLink smooth to="/#contact">Contacto</HashLink></li>
+          <li className="menu-item"><HashLink smooth to="/la-terapia">La Terapia</HashLink></li>
+          <li className="menu-item"><HashLink smooth to="/descubre">Descúbrete</HashLink></li>
+          <li className="menu-item"><HashLink smooth to="/sobre-mi">Sobre mí</HashLink></li>
+          <li className="menu-item"><HashLink smooth to="/contacto">Contacto</HashLink></li>
         </ul>
       </nav>
+
+      {/* Botón Reservar Cita */}
+      <HashLink smooth to="/contacto" className="btn-reservar">
+        Reservar Cita
+      </HashLink>
 
       {/* Menú móvil */}
       {isMenuOpen && (
         <nav className="mobile-menu menu-open">
           <ul>
             <li className="menu-item"><HashLink smooth to="/#inicio" onClick={closeMenu}>Inicio</HashLink></li>
-            <li className="menu-item"><HashLink smooth to="/sobre-mi" onClick={closeMenu}>Sobre mí</HashLink></li>
             <li className="menu-item"><HashLink smooth to="/#servicios" onClick={closeMenu}>Servicios</HashLink></li>
-            <li className="menu-item"><HashLink smooth to="/#contact" onClick={closeMenu}>Contacto</HashLink></li>
+            <li className="menu-item"><HashLink smooth to="/la-terapia" onClick={closeMenu}>La Terapia</HashLink></li>
+            <li className="menu-item"><HashLink smooth to="/descubre" onClick={closeMenu}>Descúbrete</HashLink></li>
+            <li className="menu-item"><HashLink smooth to="/sobre-mi" onClick={closeMenu}>Sobre mí</HashLink></li>
+            <li className="menu-item"><HashLink smooth to="/contacto" onClick={closeMenu}>Contacto</HashLink></li>
           </ul>
         </nav>
       )}
 
-      {/* Íconos de redes */}
-      <div className="header-icons">
-        <a href="https://www.instagram.com/interiormivoz/" target="_blank" rel="noopener noreferrer">
-          <img src="/images/instagram.png" alt="Instagram" className="icon-image" />
-        </a>
-        <a href="https://www.doctoralia.es/carolina-durango-piedrahita/psicologo/murcia" target="_blank" rel="noopener noreferrer">
-          <img src="/images/doctoralia.png" alt="Doctoralia" className="icon-image" />
-        </a>
-      </div>
+
     </header>
   );
 };

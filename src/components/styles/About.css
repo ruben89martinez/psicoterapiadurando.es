@@ -1,48 +1,186 @@
+/* About Section */
 .about {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 2rem;
-  background-color: #f8f8f8;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 4rem;
+  max-width: 1000px;
+  margin: 3rem auto 2rem;
+  padding: 2.5rem 3rem;
+  background: var(--bg-card);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-xl);
+  border: 1px solid rgba(45, 95, 127, 0.1);
+  position: relative;
+  overflow: hidden;
+  scroll-margin-top: 90px;
 }
 
-/* Imagen decorativa/personal */
+.about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+}
+
+/* Image Container */
 .about-image-container {
-  text-align: center;
-  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  position: relative;
 }
 
 .about-image {
   max-width: 250px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   object-fit: cover;
+  border: 5px solid white;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  z-index: 1;
+  transition: transform var(--transition-base);
 }
 
-/* Contenedor del texto */
+.about-image:hover {
+  transform: scale(1.05);
+}
+
+/* Text Content */
 .about-text {
   line-height: 1.8;
-  font-size: 1.1rem;
-  color: #333;
+  font-size: 1.05rem;
+  color: var(--text-secondary);
 }
 
 .about-text p {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  transition: transform var(--transition-base);
+}
+
+.about-text p:hover {
+  transform: translateX(5px);
+}
+
+.about-text strong {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.colegiado-info {
+  text-align: center !important;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, rgba(45, 95, 127, 0.08), rgba(45, 95, 127, 0.05));
+  border-left: 4px solid var(--primary-color);
+  border-radius: var(--radius-md);
+  margin: 1.5rem 0 !important;
+  font-size: 1.1rem;
+}
+
+.colegiado-info:hover {
+  transform: none !important;
+  background: linear-gradient(135deg, rgba(45, 95, 127, 0.12), rgba(45, 95, 127, 0.08));
+}
+
+.colegiado-info strong {
+  color: var(--primary-dark);
+  font-size: 1.15rem;
 }
 
 .about-text h3 {
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
-  font-size: 1.3rem;
-  color: #2c3e50;
-  border-bottom: 2px solid #e0e0e0;
-  padding-bottom: 0.3rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.about-text h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  border-radius: 2px;
 }
 
 .about h2 {
-  font-size: 2rem;
+  font-size: clamp(2rem, 4vw, 2.5rem);
   margin-bottom: 1.5rem;
   text-align: center;
-  color: #2c3e50;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about {
+    margin: 2rem auto 1.5rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .about-image-container {
+    margin-bottom: 1.5rem;
+  }
+
+  .about-image {
+    max-width: 200px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .about-text {
+    font-size: 1rem;
+  }
+
+  .about-text h3 {
+    font-size: 1.35rem;
+    margin-top: 1.5rem;
+  }
+
+  .about-text p {
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    margin: 1.5rem auto 1rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .about-image-container {
+    margin-bottom: 1rem;
+  }
+
+  .about-image {
+    max-width: 160px;
+    width: 160px;
+    height: 160px;
+    border-width: 3px;
+  }
+
+  .about-text {
+    font-size: 0.95rem;
+  }
+
+  .about-text h3 {
+    font-size: 1.25rem;
+    margin-top: 1.25rem;
+  }
+
+  .about-text p {
+    margin-bottom: 1rem;
+  }
 }

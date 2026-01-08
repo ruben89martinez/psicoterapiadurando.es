@@ -1,121 +1,240 @@
-/* Contenedor principal del componente */
+/* Services Container */
 .services-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 40px 20px;
-  background-color: #f7f9fc;
-  /* Fondo suave */
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  /* Sombra ligera */
+  padding: 2.5rem 2rem;
+  background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  scroll-margin-top: 90px;
 }
 
-/* Título del componente */
+/* Services Title */
 .services-title {
   text-align: center;
-  margin-bottom: 30px;
-  font-size: 28px;
-  font-weight: bold;
-  color: #333;
-}
-
-/* Contenedor de columnas */
-.services-columns {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
-  /* Permite ajustar columnas en pantallas pequeñas */
-}
-
-/* Cada columna */
-.services-column {
-  flex: 1;
-  min-width: 250px;
-  text-align: center;
-  border: 1px solid #ddd;
-  /* Borde de cada columna */
-  border-radius: 8px;
-  background-color: #ffffff;
-  /* Fondo blanco */
-  padding: 20px;
+  margin-bottom: 2rem;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   position: relative;
-  /* Necesario para posicionar contenido desplegable en móvil */
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  padding-bottom: 1rem;
+}
+
+.services-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  border-radius: 2px;
+}
+
+/* Services Grid */
+.services-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Individual Service Card */
+.services-column {
+  background: var(--bg-card);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+  position: relative;
+  border: 1px solid rgba(45, 95, 127, 0.1);
 }
 
 .services-column:hover {
-  transform: scale(1.02);
-  /* Efecto de agrandamiento */
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--accent-color);
 }
 
-/* Imagen de servicio */
+/* Service Image */
 .service-image {
   width: 100%;
-  max-width: 200px;
-  height: auto;
-  margin: 0 auto 15px;
-  border-radius: 6px;
+  height: 250px;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
 }
 
-/* Botón del acordeón */
+.services-column:hover .service-image {
+  transform: scale(1.05);
+}
+
+/* Accordion Button */
 .accordion-button {
   width: 100%;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  color: #ffffff;
-  background-color: #007bff;
+  padding: 1.25rem 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
   border: none;
-  border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-button::after {
+  content: '+';
+  font-size: 1.75rem;
+  font-weight: 300;
+  transition: transform var(--transition-base);
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.accordion-button.active::after {
+  content: '−';
+  transform: rotate(180deg);
+}
+
+.accordion-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s ease;
+}
+
+.accordion-button:hover::before {
+  left: 100%;
 }
 
 .accordion-button:hover {
-  background-color: #0056b3;
-  transform: scale(1.03);
+  background: linear-gradient(135deg, var(--primary-light) 0%, var(--accent-color) 100%);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .accordion-button.active {
-  background-color: #28a745;
+  background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-light) 100%);
 }
 
-/* Contenido desplegable */
+/* Accordion Content */
 .accordion-content {
-  margin-top: 20px;
-  padding: 20px;
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  display: none;
-  /* Oculto por defecto */
+  padding: 2rem 1.5rem;
+  background: linear-gradient(180deg, rgba(45, 95, 127, 0.02) 0%, transparent 100%);
+  animation: slideDown 0.3s ease-out;
+  border-top: 1px solid rgba(45, 95, 127, 0.1);
 }
 
-.services-column.active .accordion-content {
-  display: block;
-  /* Se muestra solo cuando la columna está activa */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  to {
+    opacity: 1;
+    max-height: 1000px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 }
 
-/* Estilo móvil */
-@media (max-width: 768px) {
+.accordion-content p {
+  margin-bottom: 1.25rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  text-align: left;
+}
+
+.accordion-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Active State Indicator */
+.services-column.active {
+  border-color: var(--accent-color);
+  box-shadow:
+    0 0 0 3px rgba(212, 165, 116, 0.1),
+    var(--shadow-lg);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
   .services-columns {
-    flex-direction: column;
-    /* Las columnas se apilan verticalmente en móvil */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .services-columns {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .services-column {
-    margin-bottom: 20px;
-    /* Espacio entre columnas */
+    margin-bottom: 0;
+  }
+
+  .service-image {
+    height: 200px;
+  }
+
+  .accordion-button {
+    padding: 1rem 1.25rem;
+    font-size: 1.1rem;
   }
 
   .accordion-content {
-    position: static;
-    /* Evita superposición, aparece debajo de cada columna */
-    margin-top: 10px;
-    width: 100%;
-    /* Asegura que ocupe todo el ancho de la columna */
+    padding: 1.5rem 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .services-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .service-image {
+    height: 180px;
+  }
+
+  .accordion-button {
+    font-size: 1rem;
+    padding: 0.875rem 1rem;
+  }
+
+  .accordion-button::after {
+    font-size: 1.5rem;
+  }
+
+  .accordion-content {
+    padding: 1.25rem 1rem;
+  }
+
+  .accordion-content p {
+    font-size: 0.95rem;
   }
 }

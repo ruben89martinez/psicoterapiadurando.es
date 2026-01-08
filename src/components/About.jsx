@@ -14,10 +14,14 @@ const About = () => {
 
       <div className="about-text">
         <p>
-          Soy <strong>Carolina Durango</strong>, me licencié en la Universidad de Almería en el 2014. 
-          Mi pasión por esta profesión viene desde pequeña en un afán de conocer el mundo que me rodeaba. 
-          Con el tiempo comprendí que la curiosidad nacía de entenderme y conocer la forma que tenía de 
+          Soy <strong>Carolina Durango</strong>, me licencié en la Universidad de Almería en el 2014.
+          Mi pasión por esta profesión viene desde pequeña en un afán de conocer el mundo que me rodeaba.
+          Con el tiempo comprendí que la curiosidad nacía de entenderme y conocer la forma que tenía de
           ocupar mi lugar en el mundo.
+        </p>
+
+        <p className="colegiado-info">
+          <strong>Núm. Colegiado: MU03683</strong>
         </p>
 
         <p>

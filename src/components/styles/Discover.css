@@ -1,0 +1,168 @@
+.discover-container {
+    max-width: 1200px;
+    margin: 3rem auto 2rem;
+    padding: 2rem;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.discover-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, rgba(45, 95, 127, 0.05) 0%, rgba(212, 165, 116, 0.05) 100%);
+    border-radius: var(--radius-2xl);
+    border: 1px solid rgba(45, 95, 127, 0.1);
+}
+
+.discover-header h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.discover-header p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.discover-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.discover-card {
+    background: var(--bg-card);
+    padding: 2.5rem;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(45, 95, 127, 0.05);
+    transition: all var(--transition-base);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.discover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-light);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+}
+
+.discover-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.discover-card p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.discover-quote-block {
+    text-align: center;
+    padding: 4rem 2rem;
+    margin: 3rem 0;
+    background: var(--primary-dark);
+    color: white;
+    border-radius: var(--radius-2xl);
+    position: relative;
+    overflow: hidden;
+}
+
+.discover-quote-block::before {
+    content: '"';
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    font-size: 12rem;
+    color: rgba(255, 255, 255, 0.1);
+    font-family: 'Playfair Display', serif;
+}
+
+.discover-quote-block blockquote {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.discover-quote-block cite {
+    font-size: 1.1rem;
+    opacity: 0.8;
+    font-style: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.discover-tip-section {
+    background: white;
+    padding: 3rem;
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-xl);
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    border-left: 8px solid var(--accent-color);
+}
+
+.tip-icon {
+    font-size: 4rem;
+    color: var(--accent-color);
+}
+
+.tip-content h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.tip-content p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .discover-container {
+        padding: 1rem;
+        margin-top: 3rem;
+    }
+
+    .discover-header {
+        padding: 2rem 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .discover-tip-section {
+        flex-direction: column;
+        padding: 2rem;
+        text-align: center;
+        gap: 1.5rem;
+    }
+}
