@@ -20,7 +20,7 @@
   width: 50%;
   height: 100%;
   background-image: url("/images/carol/foto_perfil.jpeg");
-  background-size: cover;
+  background-size: contain;
   background-position: center top;
   background-repeat: no-repeat;
   z-index: 0;
@@ -33,7 +33,7 @@
   left: 0;
   width: 50%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(12, 41, 62, 0.4) 0%, rgba(28, 78, 104, 0.35) 100%);
+  background: none;
   z-index: 1;
 }
 
