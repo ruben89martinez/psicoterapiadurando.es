@@ -809,6 +809,25 @@
     flex-direction: column;
     gap: 1rem;
   }
+
+  .trust-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin: 2rem auto 0;
+  }
+
+  .trust-badge {
+    padding: 1.5rem 1rem;
+  }
+
+  .trust-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -868,5 +887,32 @@
 
   .pricing-card {
     padding: 2rem;
+  }
+
+  .trust-section {
+    padding: 2rem 1rem;
+  }
+
+  .trust-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin: 1.5rem auto 0;
+  }
+
+  .trust-badge {
+    padding: 1.25rem 0.75rem;
+  }
+
+  .trust-icon {
+    font-size: 2.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .trust-badge h4 {
+    font-size: 1.1rem;
+  }
+
+  .trust-badge p {
+    font-size: 0.875rem;
   }
 }

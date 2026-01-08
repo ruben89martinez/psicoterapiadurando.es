@@ -44,11 +44,11 @@ const Services = () => {
       ],
     },
     {
-      title: "Terapia para Diversidad Sexual y de Género",
+      title: "Duelo",
       image: "/images/personas/expresar-confiar.jpg",
       content: [
-        "Ofrecemos un espacio seguro, inclusivo y libre de juicios para personas de la comunidad LGBTIQ+. Entendemos los desafíos únicos relacionados con la identidad de género, orientación sexual y los procesos de aceptación personal y social.",
-        "Trabajamos en el fortalecimiento de la autoestima, el manejo del estrés minoritario, la gestión del proceso de salida del armario y el apoyo en transiciones de género. Nuestro objetivo es acompañarte en tu proceso de autodescubrimiento y bienestar emocional.",
+        "El duelo es un proceso natural y necesario ante la pérdida de un ser querido, una relación, un trabajo o cualquier cambio significativo en la vida. Te acompañamos en este camino difícil, ofreciéndote un espacio seguro donde expresar tus emociones sin juicios.",
+        "Trabajamos para que puedas comprender y atravesar las diferentes fases del duelo a tu ritmo, desarrollando estrategias de afrontamiento saludables. Nuestro objetivo es ayudarte a honrar tu pérdida mientras construyes una nueva forma de seguir adelante con tu vida.",
       ],
     },
     {
