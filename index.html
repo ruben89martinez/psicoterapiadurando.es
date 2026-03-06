@@ -1,16 +1,241 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="images/logos/logo-zen-blanco.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Psicoterapia Durango</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Psicoterapia Durango – Carolina Durango, psicóloga colegiada en Murcia. Terapia individual, de pareja, familiar y online." />
+  <title>Psicoterapia Durango</title>
+  <link rel="icon" type="image/svg+xml" href="public/images/logos/logo-zen-blanco.svg" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+  <header class="header-container" id="main-header">
+    <div class="header-logo">
+      <img src="public/images/logos/logo-zen-blanco-sin-fondo.png" alt="Logo Zen" class="logo-image" />
+      <img src="public/images/logos/logo_letra_negro-sin-fondo.png" alt="Psicoterapia Durango" class="logo-letras" />
+    </div>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">☰</button>
+    <nav class="header-menu">
+      <ul>
+        <li class="menu-item"><a href="index.html#inicio">Inicio</a></li>
+        <li class="menu-item"><a href="index.html#servicios">Servicios</a></li>
+        <li class="menu-item"><a href="la-terapia.html">La Terapia</a></li>
+        <li class="menu-item"><a href="descubre.html">Descúbrete</a></li>
+        <li class="menu-item"><a href="sobre-mi.html">Sobre mí</a></li>
+        <li class="menu-item"><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+    <a href="contacto.html" class="btn-reservar">Reservar Cita</a>
+    <nav class="mobile-menu" id="mobile-menu">
+      <ul>
+        <li class="menu-item"><a href="index.html#inicio">Inicio</a></li>
+        <li class="menu-item"><a href="index.html#servicios">Servicios</a></li>
+        <li class="menu-item"><a href="la-terapia.html">La Terapia</a></li>
+        <li class="menu-item"><a href="descubre.html">Descúbrete</a></li>
+        <li class="menu-item"><a href="sobre-mi.html">Sobre mí</a></li>
+        <li class="menu-item"><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Psicoterapia Durango</h1>
+          <p>Un espacio diseñado para tu bienestar emocional.</p>
+        </div>
+        <div class="hero-button">
+          <a href="contacto.html" class="btn">Reserva tu cita</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features-section bg-light p-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 image-column">
+            <img src="public/images/despacho_sereno.jpg" alt="Paisaje sereno" class="img-fluid" />
+          </div>
+          <div class="col-md-6 text-column">
+            <h2 class="mb-4">Encuentra Paz y Comprensión</h2>
+            <p class="lead primerbloque">
+              "Tu bienestar emocional es nuestra prioridad. Aquí encontrarás un espacio seguro donde puedes ser tú mismo, sin juicios, sin prisas.
+              A través de la empatía y la comprensión, te ayudamos a conectar contigo mismo, superar desafíos y construir una vida más plena y equilibrada.
+              Respira, estás en el lugar correcto."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="timeline-section" id="timeline">
+      <div class="container">
+        <h2 class="section-title">Tu Camino Hacia el Bienestar</h2>
+        <p class="section-subtitle">Un proceso estructurado para tu crecimiento personal</p>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker">1</div>
+            <div class="timeline-content">
+              <h3>Primera Consulta</h3>
+              <p>Conocemos tus necesidades y objetivos. Evaluación inicial sin compromiso.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker">2</div>
+            <div class="timeline-content">
+              <h3>Plan Personalizado</h3>
+              <p>Diseñamos un plan de tratamiento adaptado a ti y tus circunstancias.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker">3</div>
+            <div class="timeline-content">
+              <h3>Sesiones Regulares</h3>
+              <p>Trabajamos juntos en sesiones programadas para alcanzar tus metas.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker">4</div>
+            <div class="timeline-content">
+              <h3>Seguimiento</h3>
+              <p>Evaluamos el progreso y ajustamos el tratamiento según sea necesario.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <div class="services-container" id="servicios">
+      <h1 class="services-title">Servicios</h1>
+      <div class="services-columns">
+
+        <div class="services-column">
+          <img src="public/images/personas/terapia_individual.jpg" alt="Terapia Individual" class="service-image" />
+          <button class="accordion-button">Terapia Individual</button>
+          <div class="accordion-content">
+            <p>La terapia individual es un espacio seguro y confidencial donde explorarás tus pensamientos, emociones y comportamientos. Te ayudaremos a fortalecer tu bienestar emocional, desarrollar herramientas para afrontar los retos de la vida y potenciar tu crecimiento personal, promoviendo mayor claridad, equilibrio y conexión contigo mismo.</p>
+          </div>
+        </div>
+
+        <div class="services-column">
+          <img src="public/images/personas/terapia-pareja.jpg" alt="Terapia de Pareja" class="service-image" />
+          <button class="accordion-button">Terapia de Pareja</button>
+          <div class="accordion-content">
+            <p>La terapia de pareja está diseñada para fortalecer la comunicación, resolver conflictos y ayudar a las parejas a construir una relación más sana y enriquecedora. Juntos exploraremos las dinámicas de la relación y trabajaremos en estrategias para superar los desafíos que puedan estar enfrentando.</p>
+            <p>Ya sea que estén atravesando una crisis o simplemente deseen mejorar su conexión, este espacio brinda herramientas prácticas y orientación profesional para fomentar la comprensión mutua y el respeto.</p>
+          </div>
+        </div>
+
+        <div class="services-column">
+          <img src="public/images/personas/terapia_online.jpg" alt="Terapia Online" class="service-image" />
+          <button class="accordion-button">Terapia Online</button>
+          <div class="accordion-content">
+            <p>La terapia online ofrece la misma calidad y profesionalidad que las sesiones presenciales, con la comodidad de conectarte desde cualquier lugar. A través de videollamadas seguras y confidenciales, podrás acceder a apoyo psicológico sin barreras geográficas.</p>
+            <p>Esta modalidad es ideal para quienes tienen agendas ocupadas, viven lejos o simplemente prefieren la comodidad de su hogar. Trabajaremos juntos en tus objetivos terapéuticos con la misma dedicación y eficacia que en consulta presencial.</p>
+          </div>
+        </div>
+
+        <div class="services-column">
+          <img src="public/images/personas/terapia_adolescente.jpg" alt="Terapia Adolescente" class="service-image" />
+          <button class="accordion-button">Terapia Adolescente</button>
+          <div class="accordion-content">
+            <p>La adolescencia es una etapa de cambios profundos y desafíos únicos. La terapia para adolescentes proporciona un espacio seguro donde pueden expresar sus emociones, enfrentar presiones sociales y desarrollar habilidades para gestionar el estrés y la ansiedad.</p>
+            <p>Trabajamos en fortalecer su autoestima, mejorar las relaciones familiares y ayudarles a construir una identidad saludable. Nuestro enfoque respeta su autonomía mientras les brindamos el apoyo necesario para navegar esta importante etapa de sus vidas.</p>
+          </div>
+        </div>
+
+        <div class="services-column">
+          <img src="public/images/personas/expresar-confiar.jpg" alt="Duelo" class="service-image" />
+          <button class="accordion-button">Duelo</button>
+          <div class="accordion-content">
+            <p>El duelo es un proceso natural y necesario ante la pérdida de un ser querido, una relación, un trabajo o cualquier cambio significativo en la vida. Te acompañamos en este camino difícil, ofreciéndote un espacio seguro donde expresar tus emociones sin juicios.</p>
+            <p>Trabajamos para que puedas comprender y atravesar las diferentes fases del duelo a tu ritmo, desarrollando estrategias de afrontamiento saludables. Nuestro objetivo es ayudarte a honrar tu pérdida mientras construyes una nueva forma de seguir adelante con tu vida.</p>
+          </div>
+        </div>
+
+        <div class="services-column">
+          <img src="public/images/personas/terapia_familiar.jpg" alt="Terapia Familiar" class="service-image" />
+          <button class="accordion-button">Terapia Familiar</button>
+          <div class="accordion-content">
+            <p>La terapia familiar es un espacio donde trabajamos con todo el sistema familiar para mejorar la comunicación, resolver conflictos y fortalecer los vínculos entre sus miembros. Entendemos que los desafíos de un miembro afectan a toda la familia, y por eso abordamos las dinámicas relacionales de manera integral.</p>
+            <p>Este tipo de terapia ayuda a identificar patrones de interacción, mejorar la comprensión mutua y desarrollar estrategias efectivas para enfrentar juntos los retos familiares. Trabajamos en crear un ambiente de respeto, apoyo y colaboración entre todos los miembros.</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="services-footer">
+        <a href="la-terapia.html" class="saber-mas-button-center">Saber más sobre la terapia</a>
+      </div>
+    </div>
+
+    <!-- TESTIMONIALS -->
+    <section class="social-proof-section" id="testimonios">
+      <div class="container">
+        <h2 class="section-title">Lo que dicen nuestros pacientes</h2>
+        <div class="testimonials-compact">
+          <div class="testimonial-compact">
+            <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+            <p>"Desde el principio me he sentido escuchada, comprendida y acompañada. Una profesional excelente."</p>
+            <div class="testimonial-author">- L.A.</div>
+          </div>
+          <div class="testimonial-compact">
+            <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+            <p>"Llevo unos meses con Carolina y solo puedo decir que es excelente. Me siento muy bien hablando con ella y noto el avance."</p>
+            <div class="testimonial-author">- M.T.</div>
+          </div>
+          <div class="testimonial-compact">
+            <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+            <p>"Gracias a Carolina estoy descubriendo otra manera de vivir la vida. Me siento más conectada conmigo misma."</p>
+            <div class="testimonial-author">- Cristina</div>
+          </div>
+          <div class="testimonial-compact">
+            <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+            <p>"Muy buena profesional, destaco su facilidad para hacerte sentir cómodo en su consulta."</p>
+            <div class="testimonial-author">- MG</div>
+          </div>
+          <div class="testimonial-compact">
+            <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+            <p>"Carolina es encantadora, una gran profesional. Me escucha y me comprende."</p>
+            <div class="testimonial-author">- Alicia</div>
+          </div>
+          <div class="testimonial-compact">
+            <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+            <p>"Escucha activa, cercanía y confianza para poder abrirte a tus emociones. 100% recomendada."</p>
+            <div class="testimonial-author">- PNT</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-info">
+        <p class="footer-address">C. Infanta Elena 12, Murcia</p>
+      </div>
+      <div class="footer-icons">
+        <a href="https://www.instagram.com/interiormivoz/" target="_blank" rel="noopener noreferrer" class="instagram-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 24 24" fill="currentColor" aria-label="Instagram"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://www.doctoralia.es/carolina-durango-piedrahita/psicologo/murcia" target="_blank" rel="noopener noreferrer">
+          <img src="public/images/logos/doctoralia.png" alt="Doctoralia" class="icon-image" />
+        </a>
+        <a href="https://wa.me/34600647145" target="_blank" rel="noopener noreferrer" class="whatsapp-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 24 24" fill="currentColor" aria-label="WhatsApp"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+      </div>
+    </div>
+    <p>&copy; Psicoterapia Durango. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
 </html>
