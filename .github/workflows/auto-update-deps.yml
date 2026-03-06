@@ -1,0 +1,44 @@
+name: Auto Update Dependencies
+
+on:
+  schedule:
+    - cron: "0 7 * * 5" # Cada viernes a las 08:00 hora Madrid
+  workflow_dispatch:     # Permite ejecutarlo manualmente desde GitHub
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Actualizar parches y seguridad
+        run: |
+          npm update
+          npm audit fix --audit-level=moderate
+
+      - name: Comprobar si hay cambios
+        id: changes
+        run: |
+          git diff --quiet package-lock.json || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit y push si hay cambios
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add package.json package-lock.json
+          git commit -m "chore: actualización automática de dependencias"
+          git push
